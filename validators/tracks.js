@@ -13,7 +13,9 @@ const validatorCreateItem = [
     check("duration.start").exists().notEmpty(),
     check("duration.end").exists().notEmpty(),
     check("mediaId").exists().isMongoId(),
-
+    (req, res, next) => {
+        
+    }
 ];
 
 module.exports = {validatorCreateItem};
